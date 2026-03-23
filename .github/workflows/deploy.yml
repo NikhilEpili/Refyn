@@ -1,0 +1,31 @@
+name: Deploy Refyn AI
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          
+      - name: Install uv
+        run: pip install uv
+        
+      - name: Install dependencies
+        run: uv sync --all-extras
+        
+      - name: Run checks
+        run: |
+          uv run ruff check .
+          uv run mypy .
+          
+      - name: Docker logic
+        run: |
+          echo "Simulated Docker Push to GHCR"
