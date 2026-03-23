@@ -254,4 +254,4 @@ MIT License. See [LICENSE](./LICENSE) for details.
 
 ## Contact
 
-Built by [your name]. If you're a startup and want to try Refyn AI, reach out at [your email] or open an issue. Early adopters get free setup support and direct access to the roadmap.
+Built by Nikhil Epili. Reach out at nikhilepili@gmail.com or open an issue. Early adopters get free setup support and direct access to the roadmap.
